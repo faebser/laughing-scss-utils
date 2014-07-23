@@ -41,6 +41,21 @@
 	line-height: ($line-height / $target);
 }
 
+// sticky footer
+%footer-parent {
+	min-height: 100%;
+    margin-bottom: -($footerHeight + $main-padding);
+    &:after {
+        content: "";
+        display: block;
+        height: $footerHeight + $main-padding;
+    }
+}
+
+%footer-target {
+	height: $footerHeight + $main-padding;
+}
+
 // ----
 // Sass (v3.3.0.rc.2)
 // Compass (v1.0.0.alpha.17)
